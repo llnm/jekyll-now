@@ -1,8 +1,43 @@
 ---
-layout: default
+layout: main
 ---
 
-<div class="posts">
+{% if site.posts.size == 0 %}
+  <h2>No post found</h2>
+{% endif %}
+
+<ul class="archive">
+  <!-- 한 page를 표시하도록 -->
+  {% for post in site.categories.CATEGORYNAMEHERE %}
+    {{ post.content }}
+  {% endfor %}
+  <!-- 
+    {% for post in site.posts %}
+    {% unless post.next %}
+      <h2>{{ post.date | date: '%Y' }}</h2>
+    {% else %}
+      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+      {% if year != nyear %}
+        <h2>{{ post.date | date: '%Y' }}</h2>
+      {% endif %}
+    {% endunless %}
+
+    <li>
+      {% if post.link %}
+      <a href="{{ post.link }}">
+      {% else %}
+      <a href="{{ site.baseurl }}{{ post.url }}">
+      {% endif %}
+        {{ post.title }}
+      </a>
+      <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+    </li>
+  {% endfor %} 
+  -->
+</ul>
+
+<!-- <div class="posts">
   {% for post in site.posts %}
     <article class="post">
 
@@ -15,4 +50,4 @@ layout: default
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
-</div>
+</div> -->

@@ -3,13 +3,13 @@
 #
 
 # Name of your site (displayed in the header)
-name: Your Name
+name: 매일 업데이트 되는 아파트 실거래가
 
 # Short bio or description (displayed in the header)
-description: Web Developer from Somewhere
+description: 전국 아파트 실거래가 페이지 (ALPHA 버전)
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+avatar: /images/logo.png
 
 #
 # Flags below are optional
@@ -21,16 +21,18 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: barryclark/jekyll-now
+  github:
   instagram:
   linkedin:
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: jekyllrb
+  twitter:
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
+footer-text:
+  copyright (c) 2020 the pages
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
@@ -38,16 +40,29 @@ disqus:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
+  UA-162746400-1
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
 url:
+  https://llnm.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
+
+# https://jekyllrb-ko.github.io/docs/configuration/front-matter-defaults/
+# type 의 값으로는 pages, posts, drafts 또는 사이트 내의 컬렉션 이름을 사용할 수 있습니다.
+#  scope/values 쌍을 생성할 때, type 은 선택사항이지만 path 는 반드시 정의해야 합니다.
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # 이전 Jekyll 2.2 에서는 `post`
+    values:
+      layout: "post"
 
 #
 # !! You don't need to change any of the configuration flags below !!
