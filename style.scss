@@ -79,7 +79,9 @@ a {
   text-decoration: none;
   cursor: pointer;
   &:hover, &:active {
-    color: $link-color;
+    color: $oc-white;
+    background-color: $blue;
+    // border-bottom: #EA215A 0.15em solid;
   }
 }
 
@@ -234,9 +236,9 @@ article {
           }
         }
       }
-      a {
-        color: $blue;
-      }
+      // a {
+      //   color: $blue;
+      // }
     }
   }
 }
@@ -277,9 +279,9 @@ article {
         border-bottom: 0.5px solid #ddd;
       }
     }
-    a {
-      color: $blue;
-    }
+    // a {
+    //   // color: $blue;
+    // }
   }
 }
 
