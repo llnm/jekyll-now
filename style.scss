@@ -26,7 +26,8 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
+  // max-width: 740px;
+  max-width: 850px;
   padding: 0 10px;
   width: 100%;
 }
@@ -42,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h5 {
-  font-weight: bold;
+  font-weight: $font-weight-strong;
 }
 
 h1 {
@@ -62,6 +63,7 @@ h3 {
 
 h4 {
   font-size: 20px;
+  font-weight: $font-weight-normal;
   color: $base-lighten-color;
 }
 
@@ -71,7 +73,13 @@ h6 {
 
 p {
   color: $text-color;
+  font-weight: 300;
   margin: 15px 0;
+}
+
+strong, b {
+  font-weight: $font-weight-strong;
+  // font-weight: bold;
 }
 
 a {
@@ -89,9 +97,6 @@ em, i {
   font-style: italic;
 }
 
-strong, b {
-  font-weight: bold;
-}
 
 sub {
   vertical-align: sub;
@@ -113,6 +118,7 @@ hr {
 // https://gist.github.com/yeun/d824fc7b04b756508f4b0143535cec30
 
 ol, ul {
+  font-weight: $font-weight-normal;
   > li {
     &:before {
       position: absolute;
